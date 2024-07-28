@@ -24,17 +24,17 @@ function addSliderBehavior(sliderId, prevArrowId, nextArrowId) {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; // Adjust the multiplier for faster/slower scrolling
+        const walk = (x - startX) * 3; 
         slider.scrollLeft = scrollLeft - walk;
     });
 
     if (prevArrow && nextArrow) {
         prevArrow.addEventListener('click', () => {
-            slider.scrollLeft -= slider.clientWidth; // Scroll one slider view left
+            slider.scrollLeft -= slider.clientWidth; 
         });
 
         nextArrow.addEventListener('click', () => {
-            slider.scrollLeft += slider.clientWidth; // Scroll one slider view right
+            slider.scrollLeft += slider.clientWidth; 
         });
     }
 }
